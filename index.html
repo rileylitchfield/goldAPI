@@ -19,18 +19,18 @@
         <div class="col-lg-4">
           <div class="form-group">
             <label for="metal" id="title">Precious Metal</label>
-            <select class="form-control" id="metal" onchange="ddlSelect();">
+            <select class="form-control" id="metal" onchange="ddlSelect()">
+              <option>Select Metal</option>
               <option id="gold" value="XAU">Gold</option>
               <option id="silver" value="XAG">Silver</option>
-              <option id="platinum" value="XPT">Platinum</option>
-              <option id="palladium" value="XPD">Palladium</option>
             </select>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="form-group">
             <label for="currency" id="title">Currency</label>
-            <select class="form-control" id="currency">
+            <select class="form-control" id="currency" onchange="ddlSelect()">
+              <option>Select Currency</option>
               <option id="usd" value="USD">USD - United States Dollar</option>
               <option id="aud" value="AUD">AUD - Australian Dollar</option>
               <option id="gbp" value="GBP">GBP - British Pound</option>
@@ -45,13 +45,17 @@
           <div class="form-group">
             <label for="date" id="title">Date</label>
             <br />
-            <input class="form-control" type="date" id="date" name="date" />
+            <input
+              class="form-control"
+              type="date"
+              id="date"
+              name="date"
+              onchange="ddlSelect()"
+            />
           </div>
         </div>
 
         <div class="col-lg-12">
-          <h3 id="price-title">Price</h3>
-          <div class="divide"></div>
           <div id="data"></div>
         </div>
       </div>

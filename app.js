@@ -8,31 +8,31 @@ var requestOptions = {
   redirect: 'follow',
 };
 
-// Metal
-var gold = document.getElementById('gold').value;
-var silver = document.getElementById('silver').value;
-var platinum = document.getElementById('platinum').value;
-var palladium = document.getElementById('palladium').value;
-
 function ddlSelect() {
-  var e = document.getElementById('metal');
-  var metalValue = e.options[e.selectedIndex].value;
-  console.log(metalValue);
+  var eMetal = document.getElementById('metal');
+  var metalValue = eMetal.options[eMetal.selectedIndex].value;
+  var eCurrency = document.getElementById('currency');
+  var currencyValue = eCurrency.options[eCurrency.selectedIndex].value;
+  var eDate = document.getElementById('date').value;
+  var dateValue = eDate.replace(/-/g, '');
+  console.log(dateValue);
+
+  fetchPrice(metalValue, currencyValue, dateValue);
 }
 
-// Currency
-var usd = document.getElementById('usd').value;
-
-function fetchPrice(metal, currency) {
+function fetchPrice(metal, currency, date) {
   fetch(
-    `https://www.goldapi.io/api/${metal}/${currency}/20200924`,
+    `https://www.goldapi.io/api/${metal}/${currency}/${date}`,
     requestOptions
   )
     .then((response) => response.json())
     .then(
-      (result) => (document.getElementById('data').innerText = result.price)
+      (result) =>
+        (document.getElementById(
+          'data'
+        ).innerHTML = `<h3 class="mt-5 text-center">Price</h3>
+      <div class="divide"></div>
+      <h4 class="price mt-3">${result.price.toFixed(2)}</h4>`)
     )
     .catch((error) => console.log('error', error));
 }
-
-fetchPrice(gold, usd);
