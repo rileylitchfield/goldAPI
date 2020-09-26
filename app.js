@@ -14,8 +14,11 @@ var silver = document.getElementById('silver').value;
 var platinum = document.getElementById('platinum').value;
 var palladium = document.getElementById('palladium').value;
 
-var e = document.getElementById('metal').selectedOptions[0].value;
-console.log(e);
+function ddlSelect() {
+  var e = document.getElementById('metal');
+  var metalValue = e.options[e.selectedIndex].value;
+  console.log(metalValue);
+}
 
 // Currency
 var usd = document.getElementById('usd').value;
