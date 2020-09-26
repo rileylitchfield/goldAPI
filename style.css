@@ -1,0 +1,53 @@
+body {
+  background: gold;
+}
+
+.container {
+  background: white;
+  margin: 3rem auto 3rem auto;
+  padding: 2rem;
+}
+
+.heading {
+  margin: 0rem 0rem 2rem 0rem;
+  text-align: center;
+}
+
+#data {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.form-group {
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+#title {
+  font-size: 1.5rem;
+}
+
+#metal,
+#currency,
+#date {
+  height: 3rem;
+  width: 100%;
+  padding: 0.2rem;
+  font-size: 1.4rem;
+}
+
+#price-title {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.row {
+  background: white;
+  padding: 0.5rem;
+}
+
+.divide {
+  margin: 0rem auto 0rem auto;
+  width: 7rem;
+  height: 1px;
+  background: black;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Gold API</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Gold API</h1>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="form-group">
+            <label for="metal" id="title">Precious Metal</label>
+            <select class="form-control" id="metal">
+              <option id="gold" value="XAU">Gold</option>
+              <option id="silver" value="XAG">Silver</option>
+              <option id="platinum" value="XPT">Platinum</option>
+              <option id="palladium" value="XPD">Palladium</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="form-group">
+            <label for="currency" id="title">Currency</label>
+            <select class="form-control" id="currency">
+              <option id="usd" value="USD">USD - United States Dollar</option>
+              <option id="aud" value="AUD">AUD - Australian Dollar</option>
+              <option id="gbp" value="GBP">GBP - British Pound</option>
+              <option id="eur" value="EUR">EUR - Euro Dollar</option>
+              <option id="cad" value="CAD">CAD - Canadian Dollar</option>
+              <option id="jpy" value="JPY">JPY - Japanese Yen</option>
+              <option id="rub" value="RUB">RUB - Russian Ruble</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="form-group">
+            <label for="date" id="title">Date</label>
+            <br />
+            <input class="form-control" type="date" id="date" name="date" />
+          </div>
+        </div>
+
+        <div class="col-lg-12">
+          <h3 id="price-title">Price</h3>
+          <div class="divide"></div>
+          <div id="data"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
